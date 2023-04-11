@@ -1,7 +1,7 @@
 with
     fonte_produtos as (
         select
-            cast(product_id as int) as id_produto
+            cast(product_id as int) as  id_produto
             , cast(supplier_id as int) as id_fornecedor
             , cast(category_id as int) as id_categoria
             , cast(product_name as string)as nome_produto
