@@ -40,15 +40,15 @@ with
             , pedido_item.regiao_destinatario
             , pedido_item.pais_destinatario
             , clientes.nome_cliente
-            , funcionarios.funcionario
-            , funcionarios.gerente
+            , funcionarios.func_nome
+            , funcionarios.id_gerente
             , produtos.nome_produto
             , produtos.nome_categoria
             , produtos.nome_fornecedor
-            , produtos.esta_discontinuado
+            , produtos.esta_descontinuado
         from pedido_item
         left join clientes on pedido_item.id_cliente = clientes.id_cliente
-        left join funcionarios on pedido_item.id_funcionario = funcionarios.id_funcionario
+        left join funcionarios on pedido_item.id_funcionario = funcionarios.id_func
         left join produtos on pedido_item.id_produto = produtos.id_produto
     )
 
